@@ -2,7 +2,7 @@ package goshell
 
 import (
 	"fmt"
-	"goshell/debug"
+	"github.com/wangxin201492/goshell/debug"
 )
 
 const (

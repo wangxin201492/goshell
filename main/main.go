@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"goshell/goshell"
+	"github.com/wangxin201492/goshell/goshell"
 )
 
 func main() {
