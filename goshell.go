@@ -22,8 +22,9 @@ func Shell(cmd string) {
 }
 
 func execute(command string) {
-	cmd := exec.Command(command)
-	err := cmd.Run()
+	//cmd := exec.Command(command)
+	//err := cmd.Run()
+	_, err := exec.Command(command).Output()
 	if err != nil {
 		log.Error(err)
 	}
