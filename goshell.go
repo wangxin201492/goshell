@@ -22,18 +22,18 @@ func Shell(cmd string) {
 	}
 }
 
-func execute(command string) {
+func execute(cmd string) {
 	//cmd := exec.Command(command)
 	//err := cmd.Run()
-	out, err := exec.Command(command).Output()
+	out, err := exec.Command("/bin/bash", "-c", cmd).Output()
 	if err != nil {
 		log.Error(err)
 	}
 	fmt.Printf("The date is %s\n", out)
 }
 
-func print(command string) {
-	log.InfoCyan("(sh)", command)
+func print(cmd string) {
+	log.InfoCyan("(sh) " + cmd)
 }
 
 func SetExecLevel(level ExecLevel) {
