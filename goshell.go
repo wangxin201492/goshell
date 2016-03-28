@@ -2,7 +2,6 @@ package goshell
 
 import (
 	"fmt"
-	"os"
 	"os/exec"
 
 	log "gitlab.baidu.com/wangxin44/golog"
@@ -26,11 +25,11 @@ func Shell(cmd string) {
 func execute(command string) {
 	//cmd := exec.Command(command)
 	//err := cmd.Run()
-	fmt.Println(os.Getenv("PATH"))
-	_, err := exec.Command(command).Output()
+	out, err := exec.Command(command).Output()
 	if err != nil {
 		log.Error(err)
 	}
+	fmt.Printf("The date is %s\n", out)
 }
 
 func print(command string) {

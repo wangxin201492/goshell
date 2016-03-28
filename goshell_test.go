@@ -5,7 +5,7 @@ import "os"
 import "fmt"
 
 func TestShell1(t *testing.T) {
-	Shell("ls")
+	Shell("pwd")
 }
 
 func TestEnv(t *testing.T) {
